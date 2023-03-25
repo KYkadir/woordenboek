@@ -1,22 +1,28 @@
 package org.example.woordenboek.data.dtos;
 
 import com.sun.istack.NotNull;
+import lombok.*;
 import org.example.woordenboek.data.entities.LanguageEntity;
 
-public class WordDto {private Long id;
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class WordDto {
+    private Long id;
 
     @NotNull
-    private String name;
+    private String word;
 
     @NotNull
-    private String definition;
+    private String meaning;
 
     @NotNull
     private LanguageEntity language;
 
     public WordDto(String name, String definition, LanguageEntity language) {
-        this.name = name;
-        this.definition = definition;
+        this.word = word;
+        this.meaning = meaning;
         this.language = language;
     }
 }

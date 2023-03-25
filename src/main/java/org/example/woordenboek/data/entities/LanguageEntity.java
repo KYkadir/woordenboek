@@ -17,7 +17,7 @@ public class LanguageEntity {
     @GeneratedValue
 
     @Column(name = "language_id", unique = true)
-    private String id;
+    private Long id;
 
     @NotNull
 
